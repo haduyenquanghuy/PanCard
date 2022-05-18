@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		BF5DCE82283328B400D52EF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCE81283328B400D52EF6 /* AppDelegate.swift */; };
 		BF5DCE84283328B400D52EF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCE83283328B400D52EF6 /* SceneDelegate.swift */; };
-		BF5DCE86283328B400D52EF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCE85283328B400D52EF6 /* ViewController.swift */; };
 		BF5DCE89283328B400D52EF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5DCE87283328B400D52EF6 /* Main.storyboard */; };
 		BF5DCE8E283328B500D52EF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5DCE8D283328B500D52EF6 /* Assets.xcassets */; };
 		BF5DCE91283328B500D52EF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5DCE8F283328B500D52EF6 /* LaunchScreen.storyboard */; };
+		BF5DCE9F2834588600D52EF6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCE9E2834588600D52EF6 /* LoginViewController.swift */; };
+		BF5DCEA12834589800D52EF6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCEA02834589800D52EF6 /* RegisterViewController.swift */; };
+		BF5DCEA3283458AB00D52EF6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCEA2283458AB00D52EF6 /* ProfileViewController.swift */; };
+		BF5DCEA6283458E200D52EF6 /* PanCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCEA5283458E200D52EF6 /* PanCardViewController.swift */; };
+		BF5DCEA92834590D00D52EF6 /* ScanQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCEA82834590D00D52EF6 /* ScanQRCodeViewController.swift */; };
+		BF5DCEAB2834592A00D52EF6 /* ShowCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCEAA2834592A00D52EF6 /* ShowCardsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF5DCE7E283328B400D52EF6 /* PanCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PanCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5DCE81283328B400D52EF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF5DCE83283328B400D52EF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BF5DCE85283328B400D52EF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF5DCE88283328B400D52EF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF5DCE8D283328B500D52EF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF5DCE90283328B500D52EF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF5DCE92283328B500D52EF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF5DCE9E2834588600D52EF6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF5DCEA02834589800D52EF6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		BF5DCEA2283458AB00D52EF6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BF5DCEA5283458E200D52EF6 /* PanCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanCardViewController.swift; sourceTree = "<group>"; };
+		BF5DCEA82834590D00D52EF6 /* ScanQRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeViewController.swift; sourceTree = "<group>"; };
+		BF5DCEAA2834592A00D52EF6 /* ShowCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCardsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,68 @@
 		BF5DCE80283328B400D52EF6 /* PanCard */ = {
 			isa = PBXGroup;
 			children = (
-				BF5DCE81283328B400D52EF6 /* AppDelegate.swift */,
-				BF5DCE83283328B400D52EF6 /* SceneDelegate.swift */,
-				BF5DCE85283328B400D52EF6 /* ViewController.swift */,
-				BF5DCE87283328B400D52EF6 /* Main.storyboard */,
-				BF5DCE8D283328B500D52EF6 /* Assets.xcassets */,
-				BF5DCE8F283328B500D52EF6 /* LaunchScreen.storyboard */,
+				BF5DCE9B28332A9900D52EF6 /* Resources */,
+				BF5DCE9828332A7800D52EF6 /* Controllers */,
+				BF5DCE9C28332ACF00D52EF6 /* Views */,
+				BF5DCE9A28332A8B00D52EF6 /* ViewModels */,
+				BF5DCE9928332A8400D52EF6 /* Models */,
 				BF5DCE92283328B500D52EF6 /* Info.plist */,
 			);
 			path = PanCard;
+			sourceTree = "<group>";
+		};
+		BF5DCE9828332A7800D52EF6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF5DCE9E2834588600D52EF6 /* LoginViewController.swift */,
+				BF5DCEA02834589800D52EF6 /* RegisterViewController.swift */,
+				BF5DCEA2283458AB00D52EF6 /* ProfileViewController.swift */,
+				BF5DCEA5283458E200D52EF6 /* PanCardViewController.swift */,
+				BF5DCEA82834590D00D52EF6 /* ScanQRCodeViewController.swift */,
+				BF5DCEAA2834592A00D52EF6 /* ShowCardsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BF5DCE9928332A8400D52EF6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF5DCE9A28332A8B00D52EF6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BF5DCE9B28332A9900D52EF6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF5DCE81283328B400D52EF6 /* AppDelegate.swift */,
+				BF5DCE83283328B400D52EF6 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BF5DCE9C28332ACF00D52EF6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF5DCE9D28332AE000D52EF6 /* Storyboard */,
+				BF5DCE8D283328B500D52EF6 /* Assets.xcassets */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF5DCE9D28332AE000D52EF6 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BF5DCE87283328B400D52EF6 /* Main.storyboard */,
+				BF5DCE8F283328B500D52EF6 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +201,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF5DCE86283328B400D52EF6 /* ViewController.swift in Sources */,
+				BF5DCEA92834590D00D52EF6 /* ScanQRCodeViewController.swift in Sources */,
+				BF5DCEA6283458E200D52EF6 /* PanCardViewController.swift in Sources */,
+				BF5DCE9F2834588600D52EF6 /* LoginViewController.swift in Sources */,
 				BF5DCE82283328B400D52EF6 /* AppDelegate.swift in Sources */,
+				BF5DCEA3283458AB00D52EF6 /* ProfileViewController.swift in Sources */,
+				BF5DCEAB2834592A00D52EF6 /* ShowCardsViewController.swift in Sources */,
 				BF5DCE84283328B400D52EF6 /* SceneDelegate.swift in Sources */,
+				BF5DCEA12834589800D52EF6 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

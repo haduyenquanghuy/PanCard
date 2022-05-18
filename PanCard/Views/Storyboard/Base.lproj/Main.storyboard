@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="exf-jL-UM9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="PanCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="SPa-9N-t52">
+                                <rect key="frame" x="168.5" y="402" width="77.5" height="92"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tu-yB-Ncw">
+                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                        <connections>
+                                            <segue destination="KWC-Sv-M46" kind="show" id="hdQ-gP-MLV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="659-R2-XMP">
+                                        <rect key="frame" x="0.0" y="61" width="77.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Register"/>
+                                        <connections>
+                                            <segue destination="uVH-ZJ-BNi" kind="show" id="hVE-bs-7aQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SPa-9N-t52" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OcY-2f-Yen"/>
+                            <constraint firstItem="SPa-9N-t52" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wZL-2w-oh6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="H5K-9i-Idc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168" y="7"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="OY6-sv-cCt">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="Lk1-ST-lJv" customClass="ProfileViewController" customModule="PanCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TL5-Mi-ZR4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PI5-u8-1la"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" selectedImage="person.fill" id="qHB-S2-H8n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fba-hG-dc5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1548" y="-941"/>
+        </scene>
+        <!--Business Card-->
+        <scene sceneID="RdS-TK-Bx4">
+            <objects>
+                <viewController id="LKW-wG-ZnL" customClass="PanCardViewController" customModule="PanCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OdZ-ba-JAo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wYH-mg-TNT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Business Card" image="creditcard" catalog="system" selectedImage="creditcard.fill" id="4eD-6i-KsX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQn-XD-Vbe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2457.971014492754" y="-300"/>
+        </scene>
+        <!--Cards list-->
+        <scene sceneID="YKS-6c-67f">
+            <objects>
+                <viewController id="A0M-dM-mgF" customClass="ScanQRCodeViewController" customModule="PanCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uqP-a1-KDc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zSF-T5-PZN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cards list" image="credit-card" selectedImage="credit-card" id="Qi5-Fe-eil"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GWr-e9-qcx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1548" y="990"/>
+        </scene>
+        <!--Scan QR-->
+        <scene sceneID="hzb-1R-ECk">
+            <objects>
+                <viewController id="9VM-pc-SqI" customClass="ShowCardsViewController" customModule="PanCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="42s-vW-I33">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WKa-ak-m8y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scan QR" image="qrcode.viewfinder" catalog="system" selectedImage="qrcode.viewfinder" id="VY3-Oe-d8z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0v9-E7-U8D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2457.971014492754" y="339.50892857142856"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="HXc-dr-Oq7">
+            <objects>
+                <viewController id="uVH-ZJ-BNi" customClass="RegisterViewController" customModule="PanCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jNs-tc-s2x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INo-3H-jA8">
+                                <rect key="frame" x="168.5" y="432.5" width="77.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Register"/>
+                                <connections>
+                                    <segue destination="KWC-Sv-M46" kind="show" id="qd7-iR-SZc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BCC-P3-Fw4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="INo-3H-jA8" firstAttribute="centerX" secondItem="jNs-tc-s2x" secondAttribute="centerX" id="lY2-8T-eyS"/>
+                            <constraint firstItem="INo-3H-jA8" firstAttribute="centerY" secondItem="jNs-tc-s2x" secondAttribute="centerY" id="mbT-LH-hBF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jKn-BX-bk4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Snp-Tx-c6w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918.84057971014499" y="6.6964285714285712"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5cC-vy-ku1">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="KWC-Sv-M46" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="yxm-qO-2MJ"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eZt-lu-HVB">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Lk1-ST-lJv" kind="relationship" relationship="viewControllers" id="YbM-CT-lmZ"/>
+                        <segue destination="LKW-wG-ZnL" kind="relationship" relationship="viewControllers" id="391-85-jax"/>
+                        <segue destination="9VM-pc-SqI" kind="relationship" relationship="viewControllers" id="RSe-Wa-k8M"/>
+                        <segue destination="A0M-dM-mgF" kind="relationship" relationship="viewControllers" id="uQW-v9-uIi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZHU-NT-CGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1605.7971014492755" y="6.6964285714285712"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mpx-d7-Z3o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="exf-jL-UM9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZD8-7D-gkC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DHV-Xu-Yy1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ajo-ck-dCL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-672.46376811594212" y="6.6964285714285712"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hdQ-gP-MLV"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="credit-card" width="25" height="25"/>
+        <image name="creditcard" catalog="system" width="128" height="88"/>
+        <image name="creditcard.fill" catalog="system" width="128" height="88"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="qrcode.viewfinder" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
