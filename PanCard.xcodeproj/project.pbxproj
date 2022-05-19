@@ -18,6 +18,10 @@
 		BF5DCEA6283458E200D52EF6 /* PanCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCEA5283458E200D52EF6 /* PanCardViewController.swift */; };
 		BF5DCEA92834590D00D52EF6 /* ScanQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCEA82834590D00D52EF6 /* ScanQRCodeViewController.swift */; };
 		BF5DCEAB2834592A00D52EF6 /* ShowCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCEAA2834592A00D52EF6 /* ShowCardsViewController.swift */; };
+		BF5DCEAE2835A22A00D52EF6 /* HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCEAD2835A22A00D52EF6 /* HexString.swift */; };
+		BF5DCEB0283667C300D52EF6 /* FontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCEAF283667C300D52EF6 /* FontProvider.swift */; };
+		BF5DCEB628367E5000D52EF6 /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCEB528367E5000D52EF6 /* BorderButton.swift */; };
+		BF5DCEB82836816D00D52EF6 /* BorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCEB72836816D00D52EF6 /* BorderTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		BF5DCEA5283458E200D52EF6 /* PanCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanCardViewController.swift; sourceTree = "<group>"; };
 		BF5DCEA82834590D00D52EF6 /* ScanQRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeViewController.swift; sourceTree = "<group>"; };
 		BF5DCEAA2834592A00D52EF6 /* ShowCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCardsViewController.swift; sourceTree = "<group>"; };
+		BF5DCEAD2835A22A00D52EF6 /* HexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexString.swift; sourceTree = "<group>"; };
+		BF5DCEAF283667C300D52EF6 /* FontProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontProvider.swift; sourceTree = "<group>"; };
+		BF5DCEB528367E5000D52EF6 /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
+		BF5DCEB72836816D00D52EF6 /* BorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,8 @@
 		BF5DCE80283328B400D52EF6 /* PanCard */ = {
 			isa = PBXGroup;
 			children = (
+				BF5DCEB1283667C900D52EF6 /* Common */,
+				BF5DCEAC2835A1A000D52EF6 /* Extension */,
 				BF5DCE9B28332A9900D52EF6 /* Resources */,
 				BF5DCE9828332A7800D52EF6 /* Controllers */,
 				BF5DCE9C28332ACF00D52EF6 /* Views */,
@@ -115,6 +125,7 @@
 		BF5DCE9C28332ACF00D52EF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF5DCEB428367E3B00D52EF6 /* CustomView */,
 				BF5DCE9D28332AE000D52EF6 /* Storyboard */,
 				BF5DCE8D283328B500D52EF6 /* Assets.xcassets */,
 			);
@@ -128,6 +139,31 @@
 				BF5DCE8F283328B500D52EF6 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BF5DCEAC2835A1A000D52EF6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BF5DCEAD2835A22A00D52EF6 /* HexString.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BF5DCEB1283667C900D52EF6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BF5DCEAF283667C300D52EF6 /* FontProvider.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BF5DCEB428367E3B00D52EF6 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				BF5DCEB528367E5000D52EF6 /* BorderButton.swift */,
+				BF5DCEB72836816D00D52EF6 /* BorderTextField.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,13 +238,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF5DCEA92834590D00D52EF6 /* ScanQRCodeViewController.swift in Sources */,
+				BF5DCEB0283667C300D52EF6 /* FontProvider.swift in Sources */,
 				BF5DCEA6283458E200D52EF6 /* PanCardViewController.swift in Sources */,
 				BF5DCE9F2834588600D52EF6 /* LoginViewController.swift in Sources */,
+				BF5DCEB628367E5000D52EF6 /* BorderButton.swift in Sources */,
 				BF5DCE82283328B400D52EF6 /* AppDelegate.swift in Sources */,
 				BF5DCEA3283458AB00D52EF6 /* ProfileViewController.swift in Sources */,
 				BF5DCEAB2834592A00D52EF6 /* ShowCardsViewController.swift in Sources */,
+				BF5DCEAE2835A22A00D52EF6 /* HexString.swift in Sources */,
 				BF5DCE84283328B400D52EF6 /* SceneDelegate.swift in Sources */,
 				BF5DCEA12834589800D52EF6 /* RegisterViewController.swift in Sources */,
+				BF5DCEB82836816D00D52EF6 /* BorderTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

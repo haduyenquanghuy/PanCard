@@ -15,6 +15,10 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+   static func identifier() -> String {
+        return String(describing: RegisterViewController.self)
+    }
+    
 
     /*
     // MARK: - Navigation

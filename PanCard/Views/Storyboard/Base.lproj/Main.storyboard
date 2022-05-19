@@ -16,47 +16,212 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="SPa-9N-t52">
-                                <rect key="frame" x="168.5" y="402" width="77.5" height="92"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bs3-uf-5o3">
+                                <rect key="frame" x="0.0" y="88" width="414" height="387"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tu-yB-Ncw">
-                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Login"/>
-                                        <connections>
-                                            <segue destination="KWC-Sv-M46" kind="show" id="hdQ-gP-MLV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="659-R2-XMP">
-                                        <rect key="frame" x="0.0" y="61" width="77.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Register"/>
-                                        <connections>
-                                            <segue destination="uVH-ZJ-BNi" kind="show" id="hVE-bs-7aQ"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="RNK-fV-4jI">
+                                        <rect key="frame" x="32" y="0.0" width="350" height="323"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dPX-qC-U3u">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="129.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Again!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="u5z-hm-l5L">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="41"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Welcome back you've been missed!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xMu-AC-67o">
+                                                        <rect key="frame" x="0.0" y="41" width="350" height="88.5"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="u5z-hm-l5L" secondAttribute="trailing" id="jom-lb-nxl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xMu-AC-67o" secondAttribute="trailing" id="nr8-jV-Ey5"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5SX-LR-fHG">
+                                                <rect key="frame" x="0.0" y="193.5" width="350" height="129.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MvG-eu-lgX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="55"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tCS-2U-7t1">
+                                                        <rect key="frame" x="0.0" y="75" width="350" height="54.5"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="dPX-qC-U3u" secondAttribute="trailing" id="9K6-4K-ejD"/>
+                                            <constraint firstAttribute="trailing" secondItem="5SX-LR-fHG" secondAttribute="trailing" id="Mk3-n1-aw5"/>
+                                            <constraint firstItem="5SX-LR-fHG" firstAttribute="leading" secondItem="RNK-fV-4jI" secondAttribute="leading" id="WgC-r3-Sle"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="RNK-fV-4jI" firstAttribute="top" secondItem="bs3-uf-5o3" secondAttribute="top" id="Rxi-HB-Czj"/>
+                                    <constraint firstAttribute="trailing" secondItem="RNK-fV-4jI" secondAttribute="trailing" constant="32" id="V1c-2C-GgO"/>
+                                    <constraint firstItem="RNK-fV-4jI" firstAttribute="leading" secondItem="bs3-uf-5o3" secondAttribute="leading" constant="32" id="phM-9q-j1d"/>
+                                    <constraint firstAttribute="bottom" secondItem="RNK-fV-4jI" secondAttribute="bottom" constant="64" id="rwQ-vi-oMT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kST-cZ-QfU">
+                                <rect key="frame" x="0.0" y="475" width="414" height="387"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="I2J-mC-bks">
+                                        <rect key="frame" x="32" y="0.0" width="350" height="387"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZAA-RZ-GTO">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="55"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYl-W3-ZM6" customClass="BorderButton" customModule="PanCard" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="55"/>
+                                                        <color key="backgroundColor" red="0.92156862745098034" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Sign In">
+                                                            <fontDescription key="titleFontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".: Or continue with :." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXN-1E-HBu">
+                                                <rect key="frame" x="0.0" y="121.5" width="350" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="86K-TV-4Ge">
+                                                <rect key="frame" x="0.0" y="216" width="350" height="64"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVT-OA-3jr" customClass="BorderButton" customModule="PanCard" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="64"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="google-logo"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joB-yc-uh1" customClass="BorderButton" customModule="PanCard" customModuleProvider="target">
+                                                        <rect key="frame" x="124.5" y="0.0" width="101" height="64"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="apple-logo"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QS-Kt-h3a" customClass="BorderButton" customModule="PanCard" customModuleProvider="target">
+                                                        <rect key="frame" x="249.5" y="0.0" width="100.5" height="64"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="facebook-logo"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Not a member? Register now" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sGn-3F-28I">
+                                                <rect key="frame" x="0.0" y="347" width="350" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="wti-Nm-2EF"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="I2J-mC-bks" firstAttribute="top" secondItem="kST-cZ-QfU" secondAttribute="top" id="DuL-Tp-jly"/>
+                                    <constraint firstItem="I2J-mC-bks" firstAttribute="leading" secondItem="kST-cZ-QfU" secondAttribute="leading" constant="32" id="hTX-gH-1aY"/>
+                                    <constraint firstAttribute="bottom" secondItem="I2J-mC-bks" secondAttribute="bottom" id="xSY-F5-SaA"/>
+                                    <constraint firstAttribute="trailing" secondItem="I2J-mC-bks" secondAttribute="trailing" constant="32" id="xU6-0x-CzV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="SPa-9N-t52" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OcY-2f-Yen"/>
-                            <constraint firstItem="SPa-9N-t52" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wZL-2w-oh6"/>
+                            <constraint firstItem="kST-cZ-QfU" firstAttribute="height" secondItem="bs3-uf-5o3" secondAttribute="height" id="7Et-NW-ky7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bs3-uf-5o3" secondAttribute="trailing" id="DyI-Mx-Bke"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kST-cZ-QfU" secondAttribute="trailing" id="EwZ-Rj-UJH"/>
+                            <constraint firstItem="bs3-uf-5o3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JOQ-dQ-9rd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kST-cZ-QfU" secondAttribute="bottom" id="V0F-0p-O27"/>
+                            <constraint firstItem="uYl-W3-ZM6" firstAttribute="height" secondItem="MvG-eu-lgX" secondAttribute="height" id="ZMd-6T-0id"/>
+                            <constraint firstItem="kST-cZ-QfU" firstAttribute="top" secondItem="bs3-uf-5o3" secondAttribute="bottom" id="ZNV-Ki-vdj"/>
+                            <constraint firstItem="uYl-W3-ZM6" firstAttribute="width" secondItem="MvG-eu-lgX" secondAttribute="width" id="aFA-bP-QCY"/>
+                            <constraint firstItem="kST-cZ-QfU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i0D-Tr-SKH"/>
+                            <constraint firstItem="kST-cZ-QfU" firstAttribute="width" secondItem="bs3-uf-5o3" secondAttribute="width" id="kc3-v5-T3B"/>
+                            <constraint firstItem="kST-cZ-QfU" firstAttribute="top" secondItem="bs3-uf-5o3" secondAttribute="bottom" id="qOl-dM-nUt"/>
+                            <constraint firstItem="bs3-uf-5o3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xiV-gV-U6C"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="H5K-9i-Idc"/>
+                    <connections>
+                        <outlet property="registerTextView" destination="sGn-3F-28I" id="lqp-Qy-hNV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="168" y="7"/>
+            <point key="canvasLocation" x="166.66666666666669" y="6.6964285714285712"/>
         </scene>
         <!--Profile-->
         <scene sceneID="OY6-sv-cCt">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="Lk1-ST-lJv" customClass="ProfileViewController" customModule="PanCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TL5-Mi-ZR4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="PI5-u8-1la"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -72,7 +237,7 @@
             <objects>
                 <viewController id="LKW-wG-ZnL" customClass="PanCardViewController" customModule="PanCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OdZ-ba-JAo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="wYH-mg-TNT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -88,7 +253,7 @@
             <objects>
                 <viewController id="A0M-dM-mgF" customClass="ScanQRCodeViewController" customModule="PanCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uqP-a1-KDc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="zSF-T5-PZN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -104,7 +269,7 @@
             <objects>
                 <viewController id="9VM-pc-SqI" customClass="ShowCardsViewController" customModule="PanCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="42s-vW-I33">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="WKa-ak-m8y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -118,7 +283,7 @@
         <!--Register View Controller-->
         <scene sceneID="HXc-dr-Oq7">
             <objects>
-                <viewController id="uVH-ZJ-BNi" customClass="RegisterViewController" customModule="PanCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="uVH-ZJ-BNi" customClass="RegisterViewController" customModule="PanCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jNs-tc-s2x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,8 +317,10 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="yxm-qO-2MJ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eZt-lu-HVB">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="scrollEdgeAppearance"/>
                     </tabBar>
                     <connections>
                         <segue destination="Lk1-ST-lJv" kind="relationship" relationship="viewControllers" id="YbM-CT-lmZ"/>
@@ -185,17 +352,23 @@
             <point key="canvasLocation" x="-672.46376811594212" y="6.6964285714285712"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="hdQ-gP-MLV"/>
-    </inferredMetricsTieBreakers>
     <resources>
+        <image name="apple-logo" width="50" height="50"/>
         <image name="credit-card" width="25" height="25"/>
         <image name="creditcard" catalog="system" width="128" height="88"/>
         <image name="creditcard.fill" catalog="system" width="128" height="88"/>
+        <image name="facebook-logo" width="48" height="48"/>
+        <image name="google-logo" width="48" height="48"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="qrcode.viewfinder" catalog="system" width="128" height="115"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
