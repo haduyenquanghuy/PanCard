@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		238C1EA399B08FEC51D38F84 /* Pods_PanCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7440CA0315C111FC43DFE6E /* Pods_PanCard.framework */; };
+		BF5B9DD42837162A00361D41 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5B9DD32837162A00361D41 /* BaseViewController.swift */; };
 		BF5DCE82283328B400D52EF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCE81283328B400D52EF6 /* AppDelegate.swift */; };
 		BF5DCE84283328B400D52EF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5DCE83283328B400D52EF6 /* SceneDelegate.swift */; };
 		BF5DCE89283328B400D52EF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5DCE87283328B400D52EF6 /* Main.storyboard */; };
@@ -25,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF5B9DD32837162A00361D41 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BF5DCE7E283328B400D52EF6 /* PanCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PanCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5DCE81283328B400D52EF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF5DCE83283328B400D52EF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +45,9 @@
 		BF5DCEAF283667C300D52EF6 /* FontProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontProvider.swift; sourceTree = "<group>"; };
 		BF5DCEB528367E5000D52EF6 /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
 		BF5DCEB72836816D00D52EF6 /* BorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderTextField.swift; sourceTree = "<group>"; };
+		C6AB2CE77A935BD97FE1B35E /* Pods-PanCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanCard.debug.xcconfig"; path = "Target Support Files/Pods-PanCard/Pods-PanCard.debug.xcconfig"; sourceTree = "<group>"; };
+		D0A23031564E5720C5AD085B /* Pods-PanCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanCard.release.xcconfig"; path = "Target Support Files/Pods-PanCard/Pods-PanCard.release.xcconfig"; sourceTree = "<group>"; };
+		F7440CA0315C111FC43DFE6E /* Pods_PanCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PanCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +55,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				238C1EA399B08FEC51D38F84 /* Pods_PanCard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69D88019A57D88DEB8D5CF39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7440CA0315C111FC43DFE6E /* Pods_PanCard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEC2F065B4B1A029FD94B64F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6AB2CE77A935BD97FE1B35E /* Pods-PanCard.debug.xcconfig */,
+				D0A23031564E5720C5AD085B /* Pods-PanCard.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BF5DCE75283328B400D52EF6 = {
 			isa = PBXGroup;
 			children = (
 				BF5DCE80283328B400D52EF6 /* PanCard */,
 				BF5DCE7F283328B400D52EF6 /* Products */,
+				AEC2F065B4B1A029FD94B64F /* Pods */,
+				69D88019A57D88DEB8D5CF39 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +116,7 @@
 		BF5DCE9828332A7800D52EF6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF5B9DD32837162A00361D41 /* BaseViewController.swift */,
 				BF5DCE9E2834588600D52EF6 /* LoginViewController.swift */,
 				BF5DCEA02834589800D52EF6 /* RegisterViewController.swift */,
 				BF5DCEA2283458AB00D52EF6 /* ProfileViewController.swift */,
@@ -173,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF5DCE95283328B500D52EF6 /* Build configuration list for PBXNativeTarget "PanCard" */;
 			buildPhases = (
+				39A34F0FE22C42182685749E /* [CP] Check Pods Manifest.lock */,
 				BF5DCE7A283328B400D52EF6 /* Sources */,
 				BF5DCE7B283328B400D52EF6 /* Frameworks */,
 				BF5DCE7C283328B400D52EF6 /* Resources */,
+				72B740415A6EA0235FE5940C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,11 +262,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		39A34F0FE22C42182685749E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PanCard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72B740415A6EA0235FE5940C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PanCard/Pods-PanCard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PanCard/Pods-PanCard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PanCard/Pods-PanCard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF5DCE7A283328B400D52EF6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5B9DD42837162A00361D41 /* BaseViewController.swift in Sources */,
 				BF5DCEA92834590D00D52EF6 /* ScanQRCodeViewController.swift in Sources */,
 				BF5DCEB0283667C300D52EF6 /* FontProvider.swift in Sources */,
 				BF5DCEA6283458E200D52EF6 /* PanCardViewController.swift in Sources */,
@@ -390,6 +463,7 @@
 		};
 		BF5DCE96283328B500D52EF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6AB2CE77A935BD97FE1B35E /* Pods-PanCard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -418,6 +492,7 @@
 		};
 		BF5DCE97283328B500D52EF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0A23031564E5720C5AD085B /* Pods-PanCard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
