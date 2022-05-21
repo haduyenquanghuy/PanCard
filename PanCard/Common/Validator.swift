@@ -1,14 +1,31 @@
 import Foundation
 
 class ValidationError: Error {
-    var message: String
+    var message: ValidateMessage
     
-    init(_ message: String) {
+    init(_ message: ValidateMessage) {
         self.message = message
     }
 }
 
+enum ValidateMessage: String {
+    case emptyUserName = "Username is Required"
+    case shortUserName = "Username must contain more than 6 characters"
+    case longUserName = "Username shouldn't contain more than 18 characters"
+    case invalidUserName = "Invalid username, username should not contain whitespaces, numbers or special characters"
+    
+    case emptyPassword = "Password is Required"
+    case shortPassword = "Password must contain more than 6 characters"
+    case longPassword = "Password shouldn't contain more than 18 characters"
+    case invalidPassword = "Password must be more than 6 characters, with at least one character and one numeric character"
+    
+    case invalidPhoneNumber = "Invalid phone number"
+    
+    case invalidEmail = "Invalid e-mail Address"
+}
+
 protocol ValidatorConvertible {
+    
     func validated(_ value: String) -> ValidationError?
 }
 
@@ -20,6 +37,12 @@ enum ValidatorType {
 }
 
 enum ValidatorFactory {
+    
+    static let userNameRegex = "^[a-z]{1,18}$"
+    static let passwordRegex = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{6,}$"
+    static let phoneRegex = "^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$"
+    static let emailRegex = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$"
+    
     static func validatorFor(type: ValidatorType) -> ValidatorConvertible {
         switch type {
         case .email: return EmailValidator()
@@ -33,38 +56,45 @@ enum ValidatorFactory {
 
 struct UserNameValidator: ValidatorConvertible {
     func validated(_ value: String)  -> ValidationError? {
-        guard value.count >= 3 else {
-            return ValidationError("Username must contain more than three characters" )
+        if value.isEmpty {
+            return ValidationError(.emptyUserName)
         }
         
-        guard value.count < 18 else {
-            return ValidationError("Username shouldn't contain more than 18 characters" )
+        if value.count <= 6 {
+            return ValidationError(.shortUserName)
         }
         
-        let regex = try! NSRegularExpression(pattern: "^[a-z]{1,18}$",  options: .caseInsensitive)
+        if value.count > 18 {
+            return ValidationError(.longUserName)
+        }
+        
+        let regex = try! NSRegularExpression(pattern: ValidatorFactory.userNameRegex,  options: .caseInsensitive)
         
         if regex.firstMatch(in: value, range: NSRange(location: 0, length: value.count)) != nil {
             return nil
         }
         
-        return ValidationError("Invalid username, username should not contain whitespaces, numbers or special characters")
+        return ValidationError(.invalidUserName)
     }
 }
 
-
 struct PasswordValidator: ValidatorConvertible {
     func validated(_ value: String) -> ValidationError? {
-        guard value != "" else {
-            return ValidationError("Password is Required")
+        if value.isEmpty {
+            return ValidationError(.emptyPassword)
         }
-        guard value.count >= 6 else {
-            return ValidationError("Password must have at least 6 characters")
+        if value.count <= 6 {
+            return ValidationError(.shortPassword)
         }
         
-        let regex = try! NSRegularExpression(pattern: "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{6,}$",  options: .caseInsensitive)
+        if value.count > 18 {
+            return ValidationError(.shortPassword)
+        }
+        
+        let regex = try! NSRegularExpression(pattern: ValidatorFactory.passwordRegex,  options: .caseInsensitive)
         
         if regex.firstMatch(in: value, options: [], range: NSRange(location: 0, length: value.count)) == nil {
-            return ValidationError("Password must be more than 6 characters, with at least one character and one numeric character")
+            return ValidationError(.invalidPassword)
         }
         
         return nil
@@ -72,17 +102,15 @@ struct PasswordValidator: ValidatorConvertible {
     }
 }
 
-//ValidationError("Invalid e-mail Address")
-
 struct EmailValidator: ValidatorConvertible {
     func validated(_ value: String) -> ValidationError? {
         
-        let regex = try! NSRegularExpression(pattern: "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$", options: .caseInsensitive)
+        let regex = try! NSRegularExpression(pattern: ValidatorFactory.emailRegex, options: .caseInsensitive)
         
         let range = NSRange(location: 0, length: value.count)
         
         if regex.firstMatch(in: value, options: [], range: range) == nil {
-            return ValidationError("Invalid e-mail Address")
+            return ValidationError(.invalidEmail)
         }
         
         return nil
@@ -93,10 +121,10 @@ struct EmailValidator: ValidatorConvertible {
 struct PhoneValidator: ValidatorConvertible {
     func validated(_ value: String) -> ValidationError? {
         
-        let regex = try! NSRegularExpression(pattern: "^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$", options: .caseInsensitive)
+        let regex = try! NSRegularExpression(pattern: ValidatorFactory.phoneRegex, options: .caseInsensitive)
         
         if regex.firstMatch(in: value, options: [], range: NSRange(location: 0, length: value.count)) == nil {
-            return ValidationError("Invalid phone number")
+            return ValidationError(.invalidPhoneNumber)
         }
         
         return nil

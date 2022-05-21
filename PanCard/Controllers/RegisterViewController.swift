@@ -16,6 +16,10 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var nameErrLabel: IconLabel!
+    @IBOutlet weak var phoneErrLabel: IconLabel!
+    @IBOutlet weak var emailErrLabel: IconLabel!
+    @IBOutlet weak var passwordErrLabel: IconLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +36,12 @@ class RegisterViewController: UIViewController {
         var errs = [ValidationError]()
         
         if let nameErr = nameField.validatedText(validationType: .username) {
+            nameErrLabel.isHidden = false
+            nameErrLabel.text = nameErr.message.rawValue
+            nameErrLabel.image = UIImage(systemName: "exclamationmark.triangle")
             errs.append(nameErr)
+        } else {
+            nameErrLabel.isHidden = true
         }
         
         if let passwordErr = passwordField.validatedText(validationType: .password) {
@@ -63,7 +72,7 @@ class RegisterViewController: UIViewController {
             if !errors.isEmpty {
                 var message = ""
                 for error in errors {
-                    message.append("\(error.message) \n")
+                    message.append("\(error.message.rawValue) \n")
                 }
                 
                 showAlert(for: message)
