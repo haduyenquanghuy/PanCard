@@ -27,29 +27,51 @@ class RegisterViewController: UIViewController {
         
     }
     
-    private func validateRegisterField() -> Bool {
-        if let name = nameField.text,
-           let phoneNum = phoneField.text,
-           let email = emailField.text,
-           let password = passwordField.text,
-           !name.isEmpty,
-           !phoneNum.isEmpty,
-           !email.isEmpty,
-           !password.isEmpty,
-           password.count >= LoginViewController.passwordMinLength {
-            return true
+    private func validateRegisterField() -> [ValidationError] {
+        
+        var errs = [ValidationError]()
+        
+        if let nameErr = nameField.validatedText(validationType: .username) {
+            errs.append(nameErr)
         }
-        return false
+        
+        if let passwordErr = passwordField.validatedText(validationType: .password) {
+            errs.append(passwordErr)
+        }
+        
+        if let emailErr = emailField.validatedText(validationType: .email) {
+            errs.append(emailErr)
+        }
+        
+        if let phoneErr = phoneField.validatedText(validationType: .phoneNumber) {
+            errs.append(phoneErr)
+        }
+        return errs
     }
+    
+    func showAlert(for alert: String) {
+        let alertController = UIAlertController(title: nil, message: alert, preferredStyle: UIAlertController.Style.alert)
+            let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(alertAction)
+            present(alertController, animated: true, completion: nil)
+        }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
         if identifier == RegisterViewController.registerSegue {
-            if validateRegisterField() {
-                login()
-                return true
+            let errors = validateRegisterField()
+            if !errors.isEmpty {
+                var message = ""
+                for error in errors {
+                    message.append("\(error.message) \n")
+                }
+                
+                showAlert(for: message)
+                return false
+                
             }
-            alertUserLoginError()
+            login()
+            return true
         }
         return false
     }
