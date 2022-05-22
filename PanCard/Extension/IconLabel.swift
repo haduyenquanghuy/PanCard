@@ -20,7 +20,6 @@ import UIKit
             imageAttachment.bounds = CGRect(x: 0, y: 0, width: imageAttachment.image!.size.width, height: imageAttachment.image!.size.height)
             // Create string with attachment
             let attachmentString = NSAttributedString(attachment: imageAttachment)
-//            attachmentString.
             // Initialize mutable string
             let completeText = NSMutableAttributedString(string: "")
             // Add image to mutable string
@@ -33,4 +32,14 @@ import UIKit
             attributedText = completeText
         }
     }
+    
+    override var text: String? {
+        
+        didSet {
+            if let image = self.image {
+                self.image = image
+            }
+        }
+    }
+    
 }

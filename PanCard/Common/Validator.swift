@@ -12,7 +12,7 @@ enum ValidateMessage: String {
     case emptyUserName = "Username is Required"
     case shortUserName = "Username must contain more than 6 characters"
     case longUserName = "Username shouldn't contain more than 18 characters"
-    case invalidUserName = "Invalid username, username should not contain whitespaces, numbers or special characters"
+    case invalidUserName = "Invalid username, username should not contain numbers or special characters"
     
     case emptyPassword = "Password is Required"
     case shortPassword = "Password must contain more than 6 characters"
@@ -38,7 +38,7 @@ enum ValidatorType {
 
 enum ValidatorFactory {
     
-    static let userNameRegex = "^[a-z]{1,18}$"
+    static let userNameRegex = "^[a-zA-Z ]{1,18}$"
     static let passwordRegex = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{6,}$"
     static let phoneRegex = "^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$"
     static let emailRegex = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$"

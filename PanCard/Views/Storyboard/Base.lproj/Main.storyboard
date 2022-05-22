@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bs3-uf-5o3" userLabel="View_1">
-                                <rect key="frame" x="0.0" y="88" width="414" height="346"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="387"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="RNK-fV-4jI">
-                                        <rect key="frame" x="32" y="0.0" width="350" height="282"/>
+                                        <rect key="frame" x="32" y="0.0" width="350" height="323"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dPX-qC-U3u">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="117"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="137.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Again!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="u5z-hm-l5L">
                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="41"/>
@@ -32,7 +32,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Welcome back you've been missed!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xMu-AC-67o">
-                                                        <rect key="frame" x="0.0" y="41" width="350" height="76"/>
+                                                        <rect key="frame" x="0.0" y="41" width="350" height="96.5"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -44,13 +44,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5SX-LR-fHG">
-                                                <rect key="frame" x="0.0" y="165" width="350" height="117"/>
+                                                <rect key="frame" x="0.0" y="185.5" width="350" height="137.5"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MvG-eu-lgX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="48.5"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="64" id="Z6m-dJ-IYW"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="59"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                         <userDefinedRuntimeAttributes>
@@ -60,7 +57,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tCS-2U-7t1">
-                                                        <rect key="frame" x="0.0" y="68.5" width="350" height="48.5"/>
+                                                        <rect key="frame" x="0.0" y="79" width="350" height="58.5"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                                         <userDefinedRuntimeAttributes>
@@ -91,16 +88,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kST-cZ-QfU" userLabel="View_2">
-                                <rect key="frame" x="0.0" y="434" width="414" height="346"/>
+                                <rect key="frame" x="0.0" y="475" width="414" height="387"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="I2J-mC-bks">
-                                        <rect key="frame" x="32" y="0.0" width="350" height="346"/>
+                                        <rect key="frame" x="32" y="0.0" width="350" height="387"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZAA-RZ-GTO">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="48.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="59"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYl-W3-ZM6" customClass="BorderButton" customModule="PanCard" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="48.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="59"/>
                                                         <color key="backgroundColor" red="0.92156862745098034" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -119,13 +116,13 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".: Or continue with :." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXN-1E-HBu">
-                                                <rect key="frame" x="0.0" y="104" width="350" height="27.5"/>
+                                                <rect key="frame" x="0.0" y="124.5" width="350" height="27.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="86K-TV-4Ge">
-                                                <rect key="frame" x="0.0" y="186.5" width="350" height="64"/>
+                                                <rect key="frame" x="0.0" y="217.5" width="350" height="64"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVT-OA-3jr" customClass="BorderButton" customModule="PanCard" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="100.5" height="64"/>
@@ -178,7 +175,7 @@
                                                 </subviews>
                                             </stackView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Not a member? Register now" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sGn-3F-28I">
-                                                <rect key="frame" x="0.0" y="306" width="350" height="40"/>
+                                                <rect key="frame" x="0.0" y="347" width="350" height="40"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="wti-Nm-2EF"/>
@@ -299,26 +296,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_pic" translatesAutoresizingMaskIntoConstraints="NO" id="L6I-2W-Jdw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="224"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gKy-0B-6p5">
-                                <rect key="frame" x="32" y="44" width="350" height="542.5"/>
+                                <rect key="frame" x="32" y="268" width="350" height="290.5"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tng-ed-TJU">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="240"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_pic" translatesAutoresizingMaskIntoConstraints="NO" id="L6I-2W-Jdw">
-                                                <rect key="frame" x="75" y="0.0" width="200" height="240"/>
-                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="L6I-2W-Jdw" firstAttribute="centerX" secondItem="Tng-ed-TJU" secondAttribute="centerX" id="Bnj-1b-GES"/>
-                                            <constraint firstItem="L6I-2W-Jdw" firstAttribute="height" secondItem="Tng-ed-TJU" secondAttribute="height" id="E9I-R4-zac"/>
-                                            <constraint firstItem="L6I-2W-Jdw" firstAttribute="centerY" secondItem="Tng-ed-TJU" secondAttribute="centerY" id="zXS-KF-BkG"/>
-                                        </constraints>
-                                    </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PCU-Pc-0qA">
-                                        <rect key="frame" x="0.0" y="252" width="350" height="48.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="48.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
                                         <userDefinedRuntimeAttributes>
@@ -328,16 +314,16 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQ2-JA-NZU" customClass="IconLabel" customModule="PanCard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="306.5" width="350" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="kPa-dA-NoK"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="54.5" width="350" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="exclamationmark.triangle" catalog="system"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Vs-xI-oP2">
-                                        <rect key="frame" x="0.0" y="312.5" width="350" height="48.5"/>
+                                        <rect key="frame" x="0.0" y="60.5" width="350" height="48.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next" textContentType="tel"/>
                                         <userDefinedRuntimeAttributes>
@@ -346,17 +332,17 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJo-Iw-z4V">
-                                        <rect key="frame" x="0.0" y="367" width="350" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="b9a-e4-pPR"/>
-                                        </constraints>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJo-Iw-z4V" customClass="IconLabel" customModule="PanCard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="115" width="350" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="exclamationmark.triangle" catalog="system"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f23-9w-UXd">
-                                        <rect key="frame" x="0.0" y="373" width="350" height="48.5"/>
+                                        <rect key="frame" x="0.0" y="121" width="350" height="48.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                         <userDefinedRuntimeAttributes>
@@ -365,17 +351,17 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZT-9d-dg4">
-                                        <rect key="frame" x="0.0" y="427.5" width="350" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="F7B-A8-QSr"/>
-                                        </constraints>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZT-9d-dg4" customClass="IconLabel" customModule="PanCard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="175.5" width="350" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="exclamationmark.triangle" catalog="system"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vgi-pv-eoP" userLabel="Password">
-                                        <rect key="frame" x="0.0" y="433.5" width="350" height="48.5"/>
+                                        <rect key="frame" x="0.0" y="181.5" width="350" height="48.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                         <userDefinedRuntimeAttributes>
@@ -384,17 +370,17 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhW-RZ-0Rx">
-                                        <rect key="frame" x="0.0" y="488" width="350" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="t83-yM-UnE"/>
-                                        </constraints>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhW-RZ-0Rx" customClass="IconLabel" customModule="PanCard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="236" width="350" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="exclamationmark.triangle" catalog="system"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ea2-Do-jd4" customClass="BorderButton" customModule="PanCard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="494" width="350" height="48.5"/>
+                                        <rect key="frame" x="0.0" y="242" width="350" height="48.5"/>
                                         <color key="backgroundColor" red="0.92156862745098034" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -423,8 +409,12 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="BCC-P3-Fw4" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gKy-0B-6p5" secondAttribute="bottom" id="3Yp-Zn-fet"/>
-                            <constraint firstItem="gKy-0B-6p5" firstAttribute="top" secondItem="BCC-P3-Fw4" secondAttribute="top" id="794-CQ-E6L"/>
                             <constraint firstItem="gKy-0B-6p5" firstAttribute="leading" secondItem="BCC-P3-Fw4" secondAttribute="leading" constant="32" id="Dwc-WE-nOL"/>
+                            <constraint firstItem="L6I-2W-Jdw" firstAttribute="leading" secondItem="BCC-P3-Fw4" secondAttribute="leading" id="MYq-DU-g0L"/>
+                            <constraint firstItem="L6I-2W-Jdw" firstAttribute="height" secondItem="jNs-tc-s2x" secondAttribute="height" multiplier="1 : 4" id="VdL-U7-i9W"/>
+                            <constraint firstItem="L6I-2W-Jdw" firstAttribute="bottom" secondItem="gKy-0B-6p5" secondAttribute="top" id="cTl-fI-lKg"/>
+                            <constraint firstItem="BCC-P3-Fw4" firstAttribute="top" secondItem="L6I-2W-Jdw" secondAttribute="top" id="l1j-bM-Tsm"/>
+                            <constraint firstItem="BCC-P3-Fw4" firstAttribute="trailing" secondItem="L6I-2W-Jdw" secondAttribute="trailing" id="qmM-5K-jfv"/>
                             <constraint firstItem="gKy-0B-6p5" firstAttribute="centerX" secondItem="jNs-tc-s2x" secondAttribute="centerX" id="v1f-hx-Ejr"/>
                         </constraints>
                     </view>
@@ -490,7 +480,18 @@
         <designable name="4QS-Kt-h3a">
             <size key="intrinsicContentSize" width="72" height="62"/>
         </designable>
-        <designable name="aQ2-JA-NZU"/>
+        <designable name="HZT-9d-dg4">
+            <size key="intrinsicContentSize" width="69.5" height="23.5"/>
+        </designable>
+        <designable name="OhW-RZ-0Rx">
+            <size key="intrinsicContentSize" width="69.5" height="23.5"/>
+        </designable>
+        <designable name="VJo-Iw-z4V">
+            <size key="intrinsicContentSize" width="69.5" height="23.5"/>
+        </designable>
+        <designable name="aQ2-JA-NZU">
+            <size key="intrinsicContentSize" width="33.5" height="23.5"/>
+        </designable>
         <designable name="ea2-Do-jd4">
             <size key="intrinsicContentSize" width="121.5" height="48.5"/>
         </designable>
@@ -513,6 +514,7 @@
         <image name="credit-card" width="25" height="25"/>
         <image name="creditcard" catalog="system" width="128" height="88"/>
         <image name="creditcard.fill" catalog="system" width="128" height="88"/>
+        <image name="exclamationmark.triangle" catalog="system" width="128" height="112"/>
         <image name="facebook-logo" width="48" height="48"/>
         <image name="google-logo" width="48" height="48"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>

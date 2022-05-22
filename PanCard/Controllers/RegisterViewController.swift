@@ -35,52 +35,42 @@ class RegisterViewController: UIViewController {
         
         var errs = [ValidationError]()
         
-        if let nameErr = nameField.validatedText(validationType: .username) {
-            nameErrLabel.isHidden = false
-            nameErrLabel.text = nameErr.message.rawValue
-            nameErrLabel.image = UIImage(systemName: "exclamationmark.triangle")
-            errs.append(nameErr)
-        } else {
-            nameErrLabel.isHidden = true
+        var firstErrorField: UITextField?
+        
+        func updateUITextField(_ textField: UITextField, errorLabel label: UILabel, validateType: ValidatorType) {
+            if let error = textField.validatedText(validationType: validateType) {
+                errs.append(error)
+                label.isHidden = false
+                label.text = error.message.rawValue
+                if firstErrorField == nil {
+                    firstErrorField = textField
+                }
+                textField.layer.borderColor = UIColor.red.cgColor
+            } else {
+                label.isHidden = true
+                textField.layer.borderColor = UIColor.white.cgColor
+            }
         }
         
-        if let passwordErr = passwordField.validatedText(validationType: .password) {
-            errs.append(passwordErr)
+        updateUITextField(nameField, errorLabel: nameErrLabel, validateType: .username)
+        updateUITextField(phoneField, errorLabel: phoneErrLabel, validateType: .phoneNumber)
+        updateUITextField(emailField, errorLabel: emailErrLabel, validateType: .email)
+        updateUITextField(passwordField, errorLabel: passwordErrLabel, validateType: .password)
+
+        if firstErrorField != nil {
+            firstErrorField!.becomeFirstResponder()
         }
         
-        if let emailErr = emailField.validatedText(validationType: .email) {
-            errs.append(emailErr)
-        }
-        
-        if let phoneErr = phoneField.validatedText(validationType: .phoneNumber) {
-            errs.append(phoneErr)
-        }
         return errs
     }
-    
-    func showAlert(for alert: String) {
-        let alertController = UIAlertController(title: nil, message: alert, preferredStyle: UIAlertController.Style.alert)
-            let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(alertAction)
-            present(alertController, animated: true, completion: nil)
-        }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
         if identifier == RegisterViewController.registerSegue {
             let errors = validateRegisterField()
-            if !errors.isEmpty {
-                var message = ""
-                for error in errors {
-                    message.append("\(error.message.rawValue) \n")
-                }
-                
-                showAlert(for: message)
-                return false
-                
+            if errors.isEmpty {
+                return true
             }
-            login()
-            return true
         }
         return false
     }
