@@ -20,6 +20,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var phoneErrLabel: IconLabel!
     @IBOutlet weak var emailErrLabel: IconLabel!
     @IBOutlet weak var passwordErrLabel: IconLabel!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    var activeField: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,44 @@ class RegisterViewController: UIViewController {
         emailField.delegate = self
         passwordField.delegate = self
         
+        registerForKeyboardNotifications()
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    private func registerForKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown(with:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+    }
+    
+    @objc func keyboardWasShown(with notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        
+        let kbSize = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect).size
+        let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: kbSize.height, right: 0)
+        
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+        
+        var aRect = view.frame
+        aRect.size.height = -kbSize.height
+        
+        if let activeField = activeField, aRect.contains(activeField.frame.origin) {
+            scrollView.scrollRectToVisible(activeField.frame, animated: true)
+        }
+    }
+    
+    @objc func keyboardWillBeHidden() {
+        
+        let contentInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+
     }
     
     private func validateRegisterField() -> [ValidationError] {
@@ -85,6 +126,8 @@ class RegisterViewController: UIViewController {
     
 }
 
+//MARK: - UITextFieldDelegate
+
 extension RegisterViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -93,6 +136,14 @@ extension RegisterViewController: UITextFieldDelegate {
         
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        activeField = nil
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        activeField = textField
     }
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
